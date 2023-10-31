@@ -1,2 +1,18 @@
 <h1>Hola</h1>
-<p>{{getJsonValue | json}}</p>
+<ul>
+<p>{{urlFacebook}}</p>
+</ul>
+<div *ngFor="let valor of getJsonValue; first as isFirst">
+    <span *ngIf="isFirst">{{valor.facebook}}</span>
+</div>
+<div *ngFor="let valor of getJsonValue; last as isLast">
+    <a *ngIf="isLast" href={{valor.web}} target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" alt="Los Tejos"  style="width: 100px;"/></a>
+</div>
+
+<div *ngFor="let valor of getJsonValue; let i = index">
+    <span *ngIf="i === 1">{{ valor.instagram }}</span>
+  </div>
+
+  <div *ngFor="let valor of getJsonValue; let i = index">
+    <a *ngIf="i === 3" href={{valor.whatsapp}} target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="" style="width: 100px;"/></a>
+  </div>
