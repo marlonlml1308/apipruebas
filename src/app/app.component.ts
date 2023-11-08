@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RestService } from './rest.service';
-import { redes } from './models/redes.interface'
+import { SocialRedes } from './models/redes.interface'
 
 
 @Component({
@@ -12,7 +12,7 @@ export class AppComponent {
   public getJsonValue:any;
   public urlFacebook!: string;
   title = 'apipruebas';
-  redes: ;
+  redes: SocialRedes[];
   
 
   constructor(private RestService:RestService){
