@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RestService } from './rest.service';
-import {} from './models/redes.interface'
+import { redes } from './models/redes.interface'
 
 
 @Component({
@@ -12,7 +12,8 @@ export class AppComponent {
   public getJsonValue:any;
   public urlFacebook!: string;
   title = 'apipruebas';
-  redes:any;
+  redes: ;
+  
 
   constructor(private RestService:RestService){
   }
@@ -22,7 +23,7 @@ export class AppComponent {
   }
 
   public cargardata(){
-    this.RestService.get('https://apimocha.com/apppb/rs')
+    this.RestService.get('https://apiradiopb.onrender.com/redes')
     .subscribe(respuesta =>{
       console.log(respuesta);
       this.getJsonValue = respuesta;
